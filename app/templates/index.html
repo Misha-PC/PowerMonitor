@@ -1,0 +1,14 @@
+
+<html>
+    <head>
+        <script lang="js">
+            var source = new EventSource('/stream');
+            source.onmessage = function (event) {
+                 alert(event.data);
+            };
+        </script>
+    </head>
+    <body>
+        <h1> Index page </h1>
+    </body>
+</html>
