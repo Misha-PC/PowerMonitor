@@ -68,8 +68,7 @@ def set_cookie():
     if not request.cookies.get('User-id'):
         res = make_response("Set cookie success")
         res.set_cookie('User-id', str(randint(0, 100)), max_age=60*60)
-    else:
-        res = make_response(f"Current User-id: {request.cookies.get('User-id')}")
-
-    return res
+        return res
+    
+    return make_response(f"Current User-id: {request.cookies.get('User-id')}")
 
